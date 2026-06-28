@@ -1,0 +1,3 @@
+Use the following command to convert the .def file into images .sif
+s
+apptainer build output.sif input.def

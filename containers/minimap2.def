@@ -1,0 +1,18 @@
+Bootstrap: docker
+From: ubuntu:22.04
+
+%post
+    apt-get update && apt-get install -y build-essential git wget zlib1g-dev libncurses5-dev libncursesw5-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev
+    git clone https://github.com/lh3/minimap2.git /opt/minimap2
+    cd /opt/minimap2 && make && cp minimap2 /usr/local/bin/
+    cd /opt
+    wget https://github.com/samtools/samtools/releases/download/1.21/samtools-1.21.tar.bz2
+    tar -xjf samtools-1.21.tar.bz2
+    cd samtools-1.21 && ./configure --prefix=/usr/local && make && make install
+    cd /opt
+    wget https://github.com/samtools/htslib/releases/download/1.21/htslib-1.21.tar.bz2
+    tar -xjf htslib-1.21.tar.bz2
+    cd htslib-1.21 && ./configure --prefix=/usr/local && make && make install
+
+%runscript
+    exec "$@"
