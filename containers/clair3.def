@@ -1,0 +1,11 @@
+Bootstrap: docker
+From: hkubal/clair3:v1.0.9
+
+%post
+    mkdir -p /models
+
+%environment
+    export PATH=/opt/bin:$PATH
+
+%runscript
+    exec /opt/bin/run_clair3.sh "$@"
