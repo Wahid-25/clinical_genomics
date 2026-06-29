@@ -1,4 +1,4 @@
-Here's a rewritten version of your guide with the same technical content but different wording and improved formatting. You can use this in your project documentation, report, or GitHub README.
+
 
 ---
 
@@ -297,4 +297,3 @@ Nextflow channels automatically transfer outputs from one process to the next, e
 * **Efficient Resource Management:** CPU cores and memory are allocated individually for each workflow stage.
 * **Flexible Configuration:** Input files and output locations can be modified easily through `nextflow.config` without changing the workflow code.
 
-This version conveys the same information as your original document while using different wording, clearer organization, and a more professional documentation style suitable for a technical report, thesis, or GitHub repository.
