@@ -1,0 +1,44 @@
+##fileformat=VCFv4.2
+##source=Curated_reference_annotation_for_training
+##reference=GRCh38
+##dataset_note=Toy synthetic CNV dataset for pipeline testing/training only; not a real patient genome; not clinically valid.
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##contig=<ID=chr3,length=198295559>
+##contig=<ID=chr4,length=190214555>
+##contig=<ID=chr5,length=181538259>
+##contig=<ID=chr6,length=170805979>
+##contig=<ID=chr7,length=159345973>
+##contig=<ID=chr8,length=145138636>
+##contig=<ID=chr9,length=138394717>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr11,length=135086622>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr13,length=114364328>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr16,length=90338345>
+##contig=<ID=chr17,length=83257441>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr20,length=64444167>
+##contig=<ID=chrX,length=156040895>
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End coordinate of the structural variant">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Length of structural variant">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=CN,Number=1,Type=Integer,Description="Estimated total copy number">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate supporting read depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype quality">
+##annotation_status=Curated_reference_only_not_full_CNV_pipeline_output
+##annotation_note=This exact CNV is synthetic and was not clinically classified by AnnotSV_ClassifyCNV_ISV-CNV_or_Horizon.
+##INFO=<ID=TARGET,Number=1,Type=Integer,Description="1 for intended disease-associated teaching CNV">
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene intentionally overlapped by the synthetic CNV">
+##INFO=<ID=DISEASE,Number=1,Type=String,Description="Target teaching disorder">
+##INFO=<ID=MOI,Number=1,Type=String,Description="Mode of inheritance">
+##INFO=<ID=SYNTHETIC_CNV,Number=0,Type=Flag,Description="Synthetic CNV created for pipeline training">
+##INFO=<ID=CNV_INTERPRETATION,Number=1,Type=String,Description="Training-only description; not an AnnotSV or ClassifyCNV result">
+##INFO=<ID=CLINICAL_CLASSIFICATION,Number=1,Type=String,Description="Clinical status of this exact synthetic CNV">
+##INFO=<ID=ANNOTATION_SOURCE,Number=1,Type=String,Description="Source and status of the curated annotation">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SYN_TAY_SACHS_001
+chr15	72340924	SYN_TAY_SACHS_CNV_001	N	<DEL>	99	PASS	SVTYPE=DEL;END=72376014;SVLEN=-35091;TARGET=1;GENE=HEXA;DISEASE=Tay-Sachs_disease;MOI=AR;SYNTHETIC_CNV;CNV_INTERPRETATION=Synthetic_gene_spanning_deletion_training_record;CLINICAL_CLASSIFICATION=Not_clinically_validated;ANNOTATION_SOURCE=synthetic_training_reference	GT:CN:DP:GQ	1/1:0:40:99
